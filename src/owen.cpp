@@ -173,10 +173,6 @@ void Owen::bounceHead(){
     speedX *= 0.96f;
     speedY *= 0.96f;
     
-    if(pointX >= ofGetWidth() && pointY >= ofGetHeight()){
-        pointX = 0;
-    
-    }
 
     
     
