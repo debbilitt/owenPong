@@ -29,9 +29,7 @@ public:
     float pointY;
     float speedY;   // speed
     float speedX;
-    float prevx;   // previous location, not sure if I need this 
-    float prevy;
-   
+
     ofVec2f speed;
     ofVec2f position;
     
@@ -41,17 +39,16 @@ public:
     ofSoundPlayer wow3;
     ofSoundPlayer wow4;
     
-    /*load an owen*/
+    /*load an owen img*/
     ofImage owen;
     ofImage bOwen;
 
     
-    
     /*texture wrapping*/
     
     ofSpherePrimitive mSphere;
-    ofTexture mTexture;
-    ofTexture mTexture2;
+    ofTexture mOwenTexturePing;
+    ofTexture mOwenTexturePong;
 
     
     Owen();  //constructor

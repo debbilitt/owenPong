@@ -86,24 +86,15 @@ void ofApp::draw(){
     if (bShowVideo) {
         
         myColorImage.draw(0,0);
-        //   grayDifference.draw(myColorImage.getWidth()+100,0);
 
         
     }
 
 
-    /*draw bounding rectangle of blobs for debugging*/
 
-//        myContourFinder.draw(0, 0, ofGetWidth(), ofGetHeight());
-//        for(int i = 0; i < myContourFinder.nBlobs; i++) {
-//            ofRectangle r = myContourFinder.blobs.at(i).boundingRect;
-//    
-//        }
-
-    
  /*full contour detection seems to work best*/
     
-    
+/*draw the outline shape, if you need*/
 //  ofNoFill();
 //  ofSetColor(ofColor::orange);
 //  ofBeginShape();

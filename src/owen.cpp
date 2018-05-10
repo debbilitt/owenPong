@@ -46,20 +46,20 @@ void Owen::setup(float x, float y){
     
     /*sphere owen*/
     
-        ofLoadImage(mTexture, "owen-wrap1.png");
-        ofLoadImage(mTexture2, "owen-wrap2.png");
+        ofLoadImage(mOwenTexturePing, "owen-wrap1.png");
+        ofLoadImage(mOwenTexturePong, "owen-wrap2.png");
 
         mSphere.setRadius(45);
     
-        mTexture.setTextureWrap(GL_NEAREST,GL_NEAREST);
-        mTexture.setTextureMinMagFilter(GL_NEAREST, GL_NEAREST);
+        mOwenTexturePing.setTextureWrap(GL_NEAREST,GL_NEAREST);
+        mOwenTexturePing.setTextureMinMagFilter(GL_NEAREST, GL_NEAREST);
     
-        mTexture2.setTextureWrap(GL_NEAREST,GL_NEAREST);
-        mTexture2.setTextureMinMagFilter(GL_NEAREST, GL_NEAREST);
+        mOwenTexturePong.setTextureWrap(GL_NEAREST,GL_NEAREST);
+        mOwenTexturePong.setTextureMinMagFilter(GL_NEAREST, GL_NEAREST);
     
-        mSphere.mapTexCoordsFromTexture(mTexture);
+        mSphere.mapTexCoordsFromTexture(mOwenTexturePing);
     
-        mSphere.mapTexCoordsFromTexture(mTexture2);
+        mSphere.mapTexCoordsFromTexture(mOwenTexturePong);
     
         ofEnableDepthTest();
     
@@ -129,25 +129,25 @@ void Owen::draw(){
     
     
     if(!bouncedOwen){
-            mTexture.bind();
+            mOwenTexturePing.bind();
     
             mSphere.draw(ofPolyRenderMode::OF_MESH_FILL);
     
             mSphere.rotate(spinX,1.0,0.0,0.0);
             mSphere.rotate(spinY,0,1.0,0.0);
         
-            mTexture.unbind();
+            mOwenTexturePing.unbind();
     
     } else {
     
-        mTexture2.bind();
+        mOwenTexturePong.bind();
         
         mSphere.draw(ofPolyRenderMode::OF_MESH_FILL);
         
         mSphere.rotate(spinX,1.0,0.0,0.0);
         mSphere.rotate(spinY,0,1.0,0.0);
         
-        mTexture2.unbind();
+        mOwenTexturePong.unbind();
     
     }
     
