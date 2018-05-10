@@ -107,7 +107,7 @@ void ofApp::draw(){
 //  ofNoFill();
 //  ofSetColor(ofColor::orange);
 //  ofBeginShape();
-//    
+//
     /* loop through each of the detected blobs*/
     /*contourFinder.nBlobs gives us the number of detected blobs*/
     for (int i = 0; i < myContourFinder.nBlobs; i++){
@@ -116,7 +116,7 @@ void ofApp::draw(){
             
     		vector<ofPoint> pts = blob.pts;
     		for(auto pt : pts){
-//                ofVertex(pt.x, pt.y);
+//               ofVertex(pt.x, pt.y);
     
                 ofVec2f temp_contour;
                 temp_contour.set(pt.x,pt.y);
